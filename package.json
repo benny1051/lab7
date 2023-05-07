@@ -1,0 +1,22 @@
+{
+  "name": "lab7",
+  "version": "1.0.0",
+  "description": "Lab i react",
+  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Drsc\u001b[C\u001b[C\u001bsrc/index.js)",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "lab7 tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benny1051/lab7.git"
+  },
+  "author": "benny petersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benny1051/lab7/issues"
+  },
+  "homepage": "https://github.com/benny1051/lab7#readme"
+}
