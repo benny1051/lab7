@@ -6,13 +6,10 @@ const MovieList = () => {
   const inputRef = useRef();
   const ratingRef = useRef();
 
-  function addItem(event) {
+  function addItem() {
     //event som händer när man klicka i input fältet.
 
-    if (
-      inputRef.current.value !== "" &&
-      ratingRef.current.value !== "Välj betyg här..."
-    ) {
+    if (inputRef.current.value !== "" && ratingRef.current.value !== "") {
       const newId = movies.length > 0 ? movies[movies.length - 1].id + 1 : 1; // Om id finns. lägg nästa på +1. Annars lägg id som 1.
 
       setMovies([
@@ -37,39 +34,37 @@ const MovieList = () => {
 
   return (
     <div>
-      <form onSubmit={addItem}>
-        <fieldset>
-          <legend>Lägg till en film</legend>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control"
-              id="title"
-              ref={inputRef}
-              placeholder="Titel här..."
-            />
-          </div>
+      <fieldset>
+        
+        <div className="form-group">
+          <h5>Titel:</h5>
+          <input
+            type="text"
+            className="form-control"
+            id="title"
+            ref={inputRef}
+            placeholder="Titel här..."
+          />
+        </div>
 
-          <div className="form-group">
-            <select className="form-control">
-              <option ref={ratingRef} value="">
-                Välj betyg här...
-              </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+        <div className="form-group">
+          <h5>Betyg:</h5>
+          <select ref={ratingRef} className="form-control">
+            <option value="">Välj betyg här...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
 
-          <div className="form-group mt-2">
-            <button id="save-movie" className="btn btn-success">
-              Spara film
-            </button>
-          </div>
-        </fieldset>
-      </form>
+        <div className="form-group mt-2">
+          <button id="save-movie" className="btn btn-success" onClick={addItem}>
+            Spara film
+          </button>
+        </div>
+      </fieldset>
 
       {/*       <input
         className="form-control"

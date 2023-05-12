@@ -1,12 +1,7 @@
 import React from "react";
 import star from "../images/star.png";
+import "./Movie.css";
 const Movie = (props) => {
-  {
-    for (let index = 0; index < props.item.rating; index++) {
-      <img className="img-responsive" src={star} />;
-    }
-  }
-
   if (props.item.rating == 1) {
     return (
       <li className="list-group-item">

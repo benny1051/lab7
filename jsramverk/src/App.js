@@ -1,11 +1,11 @@
 import MovieList from "./components/MovieList";
-import MovieHeader from "./components/MovieHeader"
+import MovieHeader from "./components/MovieHeader";
 
 function App() {
   return (
-    <div> 
-      <MovieHeader/>
-      <MovieList/>
+    <div>
+      <MovieHeader />
+      <MovieList />
     </div>
   );
 }
